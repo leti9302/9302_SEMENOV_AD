@@ -11,4 +11,5 @@ void main() {
 	lst->set(1, 3);
 	lst->pop_back();
 	lst->print_to_console();
+	delete lst;
 }

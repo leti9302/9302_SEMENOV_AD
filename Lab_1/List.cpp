@@ -10,6 +10,10 @@ List::List()
 	size = 0;
 }
 
+List::~List() {
+	clear();
+}
+
 void List::push_back(int newElem)
 {
 	if (size == 0) {
@@ -180,13 +184,13 @@ bool List::isEmpty()
 
 void List::push_back(List add)
 {
-	if (size == 0) {
-		head = add.head;
-		tail = add.tail;
-}
-	else {
-		tail->next = add.head;
-		tail = add.tail;
+	if (add.get_size() > 0) {
+		size_t counter = 0;
+		Node* current = add.head;
+		while (counter < add.get_size()) {
+			push_back(current->data);
+			current = current->next;
+			counter++;
+		}
 	}
-	size += add.size;
 }

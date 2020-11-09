@@ -226,8 +226,6 @@ namespace UnitTest
 			lst2->push_back(9);
 			lst->push_back(*lst2);
 			Assert::AreEqual(lst->at(2), 9);
-			lst2->clear();
-			delete lst2;
 		}
 
 		TEST_METHOD(empty_list_added) {

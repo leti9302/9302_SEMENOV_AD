@@ -20,7 +20,7 @@ private:
 	size_t size; //Size of the list
 public:
 	List();
-	~List(){};
+	~List();
 
 	void push_back(int); //Add a new element to the end of the list
 	void push_front(int); //Add a new element to the top of the list
